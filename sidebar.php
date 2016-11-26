@@ -77,34 +77,42 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 						</div>
 						<div id="Tcomments" class="tab-pane">
 								<div class="tag-cloud">
-										<a href="#">Water</a>
-										<a href="#">Students</a>
-										<a href="#">NYC</a>
-										<a href="#">Education</a>
-										<a href="#">Poverty</a>
-										<a href="#">Food</a>
-										<a href="#">Poor</a>
-										<a href="#">Business</a>
-										<a href="#">Love</a>
-										<a href="#">Help</a>
-										<a href="#">Savings</a>
-										<a href="#">Winter</a>
-										<a href="#">Soul</a>
-										<a href="#">Power</a>
+									<?php
+									$tags = get_tags();
+									$html = '';
+									foreach ( $tags as $tag ) {
+										$tag_link = get_tag_link( $tag->term_id );
+
+										$html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
+										$html .= "{$tag->name}</a>";
+									}
+									echo $html;
+									?>
 								</div>
 						</div>
 				</div>
 		</div>
+		<?php
+		// Only show the widget if site has multiple categories.
+		if ( vedkrishna_categorized_blog() ) :
+	  ?>
 		<div class="widget sidebar-widget widget_categories">
 			<h3 class="widgettitle">Post Categories</h3>
 				<ul>
-					<li><a href="#">Education</a> (3)</li>
-					<li><a href="#">Environment</a> (1)</li>
-					<li><a href="#">Water</a> (4)</li>
-					<li><a href="#">Wild life</a> (2)</li>
-					<li><a href="#">Small business</a> (12)</li>
+					<?php
+						wp_list_categories( array(
+							'orderby'    => 'count',
+							'order'      => 'DESC',
+							'show_count' => 1,
+							'title_li'   => '',
+							'number'     => 10,
+						) );
+					?>
 				</ul>
 		</div>
+		<?php
+		endif;
+		?>
 		<div class="widget sidebar-widget widget_search">
 			<div class="input-group">
 					<input type="text" class="form-control" placeholder="Enter your keywords">
