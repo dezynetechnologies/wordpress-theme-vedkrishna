@@ -37,7 +37,7 @@ get_header(); ?>
                                 <div class="icon-box ibox-border">
                                     <div class="ibox-icon">
                                         <i class="fa fa-user-md"></i>
-                                    </div>
+                                  </div>  
                                     <h3>Health Benefits</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
                                 </div>
@@ -132,7 +132,7 @@ get_header(); ?>
                         <hr class="sm">
             			<div class="spacer-20"></div>
                         <div class="job-block">
-                        	<a href="#" class="btn btn-default btn-sm">Apply now</a>
+                        	<a href="#openings" class="btn btn-default btn-sm">Apply now</a>
                         	<span class="meta-data-thick">Administration</span>
                             <h4>Project Coordinator</h4>
                         	<span class="meta-data">NYC</span>
@@ -140,7 +140,7 @@ get_header(); ?>
                             <a href="#" class="basic-link">Read more</a>
                         </div>
                         <div class="job-block">
-                        	<a href="#" class="btn btn-default btn-sm">Apply now</a>
+                        	<a href="#openings" class="btn btn-default btn-sm">Apply now</a>
                         	<span class="meta-data-thick">Education</span>
                             <h4>Team leader</h4>
                         	<span class="meta-data">NYC</span>

@@ -12,7 +12,7 @@
 ?>    <div class="site-footer parallax parallax3" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/parallax3.jpg)">
     	<div class="container">
         	<div class="row">
-            	<div class="col-md-4 col-sm-4">
+            	<div class="col-md-3 col-sm-3">
                 	<div class="widget footer_widget">
                     	<h4 class="widgettitle">About Born to Give</h4>
                         <p><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></p>
@@ -27,7 +27,7 @@
                         </ul>
                     </div>
                 </div>
-            	<div class="col-md-4 col-sm-4">
+            	<div class="col-md-3 col-sm-3">
                 	<div class="widget footer_widget widget_links">
                     	<h4 class="widgettitle">Blogroll</h4>
                         <ul>
@@ -38,11 +38,38 @@
                         </ul>
                     </div>
                 </div>
-            	<div class="col-md-4 col-sm-4">
+                <div class="col-md-3 col-sm-3">
+
+
+
+                            <div class="twitter-wrapper">
+                               <a class="twitter-timeline" href="https://twitter.com/vkfoundation"
+
+                                  data-theme="dark"
+                                  data-chrome="transparent noheader  nofooter noscrollbar"
+                                  height="300" width="200">Tweets by vkfoundation</a>
+                            </div>
+                            <script>
+  !function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + "://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  }(document, "script", "twitter-wjs");
+</script>
+
+
+</div>
+            	<div class="col-md-3 col-sm-3">
                 	<div class="widget footer_widget">
-                     <script async src="https://d36hc0p18k1aoc.cloudfront.net/pages/a5b5e5.js"></script><div class="tintup" data-id="vedkrishna67/instagram" data-columns="1" data-mobilescroll="true"    data-infinitescroll="true" data-personalization-id="841289" style="height:280px;width:320px;"><a href="http://www.tintup.com/blog/the-best-twitter-wall-display" style="width:118px;height:31px;background-image:url(//d33w9bm0n1egwm.cloudfront.net/assets/logos/poweredbytintsmall.png);position:absolute;bottom:10px;right: 20px;text-indent: -9999px;z-index:9;">twitter wall for events</a></div>
+                     <script async src="https://d36hc0p18k1aoc.cloudfront.net/pages/a5b5e5.js"></script><div class="tintup" data-id="vedkrishna67/instagram" data-columns="1" data-mobilescroll="true"    data-infinitescroll="true" data-personalization-id="841289" style="height:280px;width:320px;"><a href="http://www.tintup.com/blog/the-best-twitter-wall-display" style="width:118px;height:31px;position:absolute;bottom:10px;right: 20px;text-indent: -9999px;z-index:9;">twitter wall for events</a></div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

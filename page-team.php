@@ -228,7 +228,7 @@ get_header(); ?>
            	</div>
             <div class="accent-bg padding-tb20 cta-fw">
     			<div class="container">
-                    <a href="#" class="btn btn-default btn-ghost btn-light btn-rounded pull-right">Become a volunteer</a>
+                    <a href="<?php bloginfo('url'); ?>/careers"> <span class="btn btn-default btn-ghost btn-light btn-rounded pull-right">Become a volunteer</span></a>
                     <h4>Let's start doing your bit for the world. Join us as a Volunteer</h4>
                 </div>
             </div>
@@ -236,11 +236,14 @@ get_header(); ?>
             <div class="text-align-center">
                 <h2>Join us now to make your impact</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus<br>Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                <a href="#" class="btn btn-primary btn-lg">Join us today</a>
+                <a href="<?php bloginfo('url'); ?>/careers">
+
+
+                                         <span class="btn btn-primary btn-lg">Join us today</span></a>
             </div>
         </div>
     </div>
-    
+
     <!-- Site Footer -->
     <?php
     get_footer();?>

@@ -3,7 +3,7 @@
 Project:	Born to give
 Version:	1.1
 Last change:	12/15/15
-Author:	imithemes 
+Author:	imithemes
 -------------------------------------------------------------------*/
 /* Stylesheets and Google fonts import */
 @import url("font-awesome.css");
@@ -78,8 +78,8 @@ html, body {
 
 html, hmtl a{
 	width:100%;
-	font-size: 100%; 
-	-webkit-text-size-adjust: 100%; 
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
 a{
@@ -106,7 +106,7 @@ a img {
 	border: none;
 }
 a > img {
-	vertical-align: middle;	
+	vertical-align: middle;
 }
 .gray-bg{
 	background:#CDCBCB;
@@ -121,7 +121,7 @@ a > img {
 	background:#454545;
 }
 img {
-	max-width: 100%;	
+	max-width: 100%;
 }
 img, object, embed, audio, video {
 	max-width: 100%;
@@ -156,7 +156,7 @@ i, em, .italic{
 	text-align: center;
 }
 .text-align-right {
-	text-align: right;	
+	text-align: right;
 }
 .color-text {
     color: #ffffff;
@@ -174,15 +174,15 @@ i, em, .italic{
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #999;  
+   color: #999;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #999;  
+   color: #999;
 }
 
-:-ms-input-placeholder {  
-   color: #999;  
+:-ms-input-placeholder {
+   color: #999;
 }
 iframe{
 	border:0;
@@ -868,10 +868,10 @@ p.meta-data{
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
-} 
+}
 html[xmlns] .slides {
 	display: block;
-} 
+}
 * html .slides {
 	height: 1%;
 }
@@ -879,7 +879,7 @@ html[xmlns] .slides {
 	zoom: 1;
 	margin:0;
 	list-style-type:none;
-}  
+}
 .hero-slider{
 	position:relative;
 	z-index:1;
@@ -2574,10 +2574,10 @@ body.boxed .body{
 	padding-top:10px;
 }
 .blog-grid-item .meta-data{
-	margin:20px 0 10px; 
+	margin:20px 0 10px;
 }
 .owl-carousel .blog-grid-item .meta-data{
-	margin:10px 0 0; 
+	margin:10px 0 0;
 	color:#eee;
 	opacity:.8
 }
@@ -3298,13 +3298,13 @@ body.boxed .body{
 /* Pricing Tables
 /*-------------------------------------------------------------------------------------------*/
 .pricing-table {
-	margin-top: 50px;	
+	margin-top: 50px;
 	margin-bottom: 50px;
 }
-.pricing-table:after { 
-	display: block; 
-	visibility: hidden; 
-	clear: both; 
+.pricing-table:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
 	height: 0;
 	content: "";
 }
@@ -3395,7 +3395,7 @@ body.boxed .body{
 .pricing-column h4 {
 	margin-bottom: 0px;
 	margin-left: -22px;
-	padding: 20px 30px 6px 30px;	
+	padding: 20px 30px 6px 30px;
 	color: #333333;
 	font-size: 54px!important;
 	line-height: 42px!important;
@@ -3958,7 +3958,7 @@ only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
+only screen and (                min-resolution: 2dppx) {
 	.default-retina-logo{
 		display:block;
 	}
@@ -3968,4 +3968,21 @@ only screen and (                min-resolution: 2dppx) {
 	.sticky .sticky-retina-logo{
 		display:block;
 	}
+}
+/*twitter stream
+*/
+.twitter-wrapper {
+  width:300px;
+  margin:auto;
+  padding:70px 35px;
+  border-radius:50%;
+  background:#333;
+  box-shadow:
+    0px 0px 50px #222 inset,
+    0px -20px 20px #000 inset,
+    0px 25px 20px #222 inset;
+  text-align:center;
+}
+.twitter-wrapper > iframe {
+  margin: auto;
 }
