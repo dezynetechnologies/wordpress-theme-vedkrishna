@@ -160,7 +160,7 @@
 <script src="<?php bloginfo('template_directory'); ?>/style-switcher/js/jquery_cookie.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/style-switcher/js/script.js"></script>
 <!-- Style Switcher Start -->
-<div class="styleswitcher visible-lg visible-md">
+<!--<div class="styleswitcher visible-lg visible-md">
   <div class="arrow-box"><a class="switch-button"><span class="fa fa-cogs fa-lg"></span></a> </div>
   <h4>Color Skins</h4>
   <ul class="color-scheme">
@@ -224,9 +224,7 @@
     <li><img alt="" src="<?php bloginfo('template_directory'); ?>/style-switcher/backgrounds/images/img4-thumb.png" data-nr="3" width="20" height="20"></li>
     <li><img alt="" src="<?php bloginfo('template_directory'); ?>/style-switcher/backgrounds/images/img5-thumb.png" data-nr="4" width="20" height="20"></li>
   </ul>
-  <small>*only for boxed layout</small> </div>
-
+  <small>*only for boxed layout</small> </div> -->
 </body>
-
 <!-- Mirrored from preview.imithemes.com/born-to-give/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Feb 2016 13:07:19 GMT -->
 </html>
