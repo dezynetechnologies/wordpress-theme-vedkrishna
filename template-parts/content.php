@@ -6,42 +6,51 @@
  *
  * @package vedkrishna
  */
-
 ?>
+<div class="blog-list-item format-standard">
+		<div class="row">
+				<div class="col-md-4 col-sm-4">
+						<a href="single-post.html" class="media-box grid-featured-img">
+									<img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
+							</a>
+					</div>
+					<div class="col-md-8 col-sm-8">
+							<?php
+							if ( is_single() ) :
+								the_title( '<h2 class="entry-title">', '</h1>' );
+							else :
+								the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+							endif;
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+							if ( 'post' === get_post_type() ) : ?>
+							<div class="entry-meta">
+								<?php vedkrishna_posted_on(); ?>
+							</div><!-- .entry-meta -->
+							<?php
+							endif; ?>
+							<div class="grid-item-excerpt">
+									<p>A blog post sample excerpt text which can be edited by editing the blog post page. Excerpt length can be changed from the default blog settings...</p>
+							</div>
+							<div class="entry-content">
+								<?php
+									the_content( sprintf(
+										/* translators: %s: Name of current post. */
+										wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'vedkrishna' ), array( 'span' => array( 'class' => array() ) ) ),
+										the_title( '<span class="screen-reader-text">"', '"</span>', false )
+									) );
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php vedkrishna_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'vedkrishna' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vedkrishna' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php vedkrishna_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+									wp_link_pages( array(
+										'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vedkrishna' ),
+										'after'  => '</div>',
+									) );
+								?>
+							</div><!-- .entry-content -->
+							<?php vedkrishna_entry_footer(); ?>
+							<!--
+							<footer class="entry-footer">
+								<?php vedkrishna_entry_footer(); ?>
+							</footer> --> <!-- .entry-footer -->
+							<a href="single-post.html" class="basic-link">Read more</a>
+					</div>
+			</div>
+	</div>

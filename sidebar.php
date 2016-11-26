@@ -24,7 +24,40 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 						<div id="Trecent" class="tab-pane active">
 								<div class="widget recent_posts">
 										<ul>
+											<?php
+											  $args = array('numberposts' => 3, // Number of recent posts thumbnails to display
+        															'post_status' => 'publish' // Show only the published posts
+																		 );
+    										$recent_posts = wp_get_recent_posts($args);
+    										foreach( $recent_posts as $recent ) {
+													$url = esc_url( get_permalink( $recent['ID'] ) );
+        									printf('<a href="%1$s" class="media-box">
+															<img src="%2$s" alt="">
+													</a><li><h5><a href="%3$s">%4$s</a></h5><span class="meta-data grid-item-meta">Posted on %5$s</span></li>',
+														$url,
+														get_the_post_thumbnail($recent['ID'], 'full'),
+														$url,
+            								apply_filters( 'the_title', $recent['post_title'], $recent['ID'] ),
+														$recent['post_date']
+        									);
+    										}
+												?>
+												<!--
 												<li>
+												$args = array( 'numberposts' => '5', 'tax_query' => array(
+												array(
+												'taxonomy' => 'post_format',
+												'field'    => 'slug',
+												'terms'    => 'post-format-aside',
+												'operator' => 'NOT IN'
+												),
+												array(
+												'taxonomy' => 'post_format',
+												'field'    => 'slug',
+												'terms'    => 'post-format-image',
+												'operator' => 'NOT IN'
+												)
+												) );
 														<a href="single-post.html" class="media-box">
 																<img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
 														</a>
@@ -44,13 +77,33 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 														</a>
 														<h5><a href="single-post.html">How to survive the tough path of life</a></h5>
 														<span class="meta-data grid-item-meta">Posted on 06th Dec, 2015</span>
-												</li>
+												</li> -->
 										</ul>
 								</div>
 						</div>
 						<div id="Tpopular" class="tab-pane">
 								<div class="widget recent_posts">
 										<ul>
+											<?php
+												$args = array('numberposts' => 3, // Number of recent posts thumbnails to display
+																			'post_status' => 'publish', // Show only the published posts
+																			'orderby' => 'title'
+																		 );
+												$recent_posts = wp_get_recent_posts($args);
+												foreach( $recent_posts as $recent ) {
+													$url = esc_url( get_permalink( $recent['ID'] ) );
+													printf('<a href="%1$s" class="media-box">
+															<img src="%2$s" alt="">
+													</a><li><h5><a href="%3$s">%4$s</a></h5><span class="meta-data grid-item-meta">Posted on %5$s</span></li>',
+														$url,
+														get_the_post_thumbnail($recent['ID'], 'full'),
+														$url,
+														apply_filters( 'the_title', $recent['post_title'], $recent['ID'] ),
+														$recent['post_date']
+													);
+												}
+												?>
+											<!--
 												<li>
 														<a href="single-post.html" class="media-box">
 																<img src="<?php bloginfo('template_directory'); ?>/images/post2.jpg" alt="">
@@ -71,7 +124,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 														</a>
 														<h5><a href="single-post.html">Donate your woolens this winter</a></h5>
 														<span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
-												</li>
+												</li> -->
 										</ul>
 								</div>
 						</div>

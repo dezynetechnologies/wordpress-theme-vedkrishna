@@ -37,7 +37,8 @@
 <link href="<?php bloginfo('template_directory'); ?>/css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
 <!-- Color Style -->
 <link class="alt" href="<?php bloginfo('template_directory'); ?>/colors/color1.css" rel="stylesheet" type="text/css">
-<link href="<?php bloginfo('template_directory'); ?>/style-switcher/css/style-switcher.css" rel="stylesheet" type="text/css">
+<!--<link href="<?php bloginfo('template_directory'); ?>/style-switcher/css/style-switcher.css" rel="stylesheet" type="text/css">
+-->
 <!-- SCRIPTS
   ================================================== -->
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script><!-- Modernizr -->
@@ -68,7 +69,7 @@
                                 </li>
 
 
-                    <li> <a href="<?php bloginfo('url'); ?>/team">
+                    <li> <a href="<?php bloginfo('url'); ?>/about">
                                             <span class="label-nav">
                                               About Us
                                             </span></a>
@@ -82,7 +83,7 @@
                     		<li> <a href="<?php bloginfo('url'); ?>/our-impact">
                                             <span class="label-nav">
                                               Our Impact</span></a></li>
-                    	
+
                     		<li> <a href="<?php bloginfo('url'); ?>/contact">
                                             <span class="label-nav">
                                               Contact Us</span></a></li>

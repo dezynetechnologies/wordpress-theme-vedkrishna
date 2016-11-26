@@ -13,6 +13,7 @@ if ( ! function_exists( 'vedkrishna_posted_on' ) ) :
  */
 function vedkrishna_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	//<span class="meta-data grid-item-meta"><i class="fa fa-calendar"></i> Posted on 11th Dec, 2015</span>
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
