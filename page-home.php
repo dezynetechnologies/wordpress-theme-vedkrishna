@@ -26,7 +26,8 @@ get_header(); ?>
                                 	<div class="flex-caption-text">
                                         <h2>Let your life be<br>an Inspiration</h2>
                                         <p>Lorem ipsum dolor sit amet, consectet<br>adipiscinge lit. Nam malesuada dapi<br>bus diam, ut fringilla purus..</p>
-                                        <a href="causes.html" class="btn btn-primary">Start with a little</a>
+                                        <a href="<?php bloginfo('url'); ?>/causes">
+                                                                     <span class="btn btn-primary">Start with a little</a>
                                     </div>
                                	</div>
                           	</div>
@@ -68,15 +69,19 @@ get_header(); ?>
         <!-- End Hero Slider -->
     </div>
     <div class="featured-links row">
-    	<a href="causes.html" class="featured-link col-md-4 col-sm-4">
+    	<a href="<?php bloginfo('url'); ?>/causes">
+                                   <span class="featured-link col-md-4 col-sm-4">
+
         	<span>View our causes</span>
         	<strong>Donate now</strong>
         </a>
-    	<a href="careers.html" class="featured-link col-md-4 col-sm-4">
+    	<a href="<?php bloginfo('url'); ?>/careers">
+                                  <span class="featured-link col-md-4 col-sm-4">
         	<span>Become a volunteer</span>
         	<strong>Join us now</strong>
         </a>
-    	<a href="events.html" class="featured-link col-md-4 col-sm-4">
+    	<a href="<?php bloginfo('url'); ?>/events">
+                                   <span class="featured-link col-md-4 col-sm-4">
         	<span>View our events</span>
         	<strong>Get involved</strong>
         </a>
@@ -283,11 +288,11 @@ get_header(); ?>
                                     <li class="format-video grid-item">
                                         <a href="https://vimeo.com/47532705" class="media-box magnific-video"> <img src="<?php bloginfo('template_directory'); ?>/images/gallery6.jpg" alt=""> </a>
                                     </li>
-                                    <li class="grid-item format-image">
-                                        <a href="images/event1.jpg" class="media-box magnific-image"> <img src="<?php bloginfo('template_directory'); ?>/images/event1.jpg" alt=""> </a>
+                                    <li class="format-image grid-item">
+                                        <a href="<?php bloginfo('template_directory'); ?>/images/event1.jpg" class="media-box magnific-image"> <img src="<?php bloginfo('template_directory'); ?>/images/event1.jpg" alt=""> </a>
                                     </li>
-                                    <li class="grid-item format-image">
-                                        <a href="images/staff1.jpg" class="media-box magnific-image"> <img src="<?php bloginfo('template_directory'); ?>/images/staff1.jpg" alt=""> </a>
+                                    <li class="format-image grid-item">
+                                        <a href="<?php bloginfo('template_directory'); ?>/images/staff1.jpg" class="media-box magnific-image"> <img src="<?php bloginfo('template_directory'); ?>/images/staff1.jpg" alt=""> </a>
                                     </li>
                                 </ul>
                                 <div class="gallery-updates-overlay">

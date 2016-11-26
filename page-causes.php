@@ -24,6 +24,7 @@ get_header(); ?>
         </div>
     </div>
     <!-- Main Content -->
+    <br>
     <div id="main-container">
     	<div class="content">
         	<div class="container">
@@ -40,6 +41,7 @@ get_header(); ?>
                                     </div>
                                     <div class="col-md-8 col-sm-8">
                                         <div class="cause-list-item-cont">
+
                                             <h3 class="post-title"><a href="single-cause.html">Help small shopkeepers of Sunyani</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur  eget...</p>
                                             <div class="meta-data">Donated $26400 / <span class="cause-target">$30000</span></div>
