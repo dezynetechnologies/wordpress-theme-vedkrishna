@@ -12,7 +12,7 @@
  * @package vedkrishna
  */
 
-get_header(); ?>
+    get_template_part('header','blog'); ?>
     <!-- Hero Area -->
     <div class="hero-area">
     	<div class="page-banner parallax" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/inside7.jpg);">
@@ -54,7 +54,7 @@ get_header(); ?>
                         //get_template_part( 'template-parts/content', 'none' );
                 			endwhile;
 
-                			the_posts_navigation();
+                			//the_posts_navigation();
 
                 		else :
 

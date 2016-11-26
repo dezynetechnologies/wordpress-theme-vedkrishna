@@ -8,8 +8,9 @@
  */
 ?>
 <div class="blog-list-item format-standard">
+	<!-- <div class="container"> -->
 		<div class="row">
-				<div class="col-md-4 col-sm-4">
+				  <div class="col-md-4 col-sm-4">
 						<a href="single-post.html" class="media-box grid-featured-img">
 									<img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
 							</a>
@@ -28,16 +29,19 @@
 							</div><!-- .entry-meta -->
 							<?php
 							endif; ?>
-							<div class="grid-item-excerpt">
+							<!-- <div class="grid-item-excerpt">
 									<p>A blog post sample excerpt text which can be edited by editing the blog post page. Excerpt length can be changed from the default blog settings...</p>
-							</div>
-							<div class="entry-content">
+							</div> -->
+							<div class="grid-item-excerpt">
 								<?php
+								  the_excerpt();
+									/* translators: %s: Name of current post. */
+									/*
 									the_content( sprintf(
-										/* translators: %s: Name of current post. */
+
 										wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'vedkrishna' ), array( 'span' => array( 'class' => array() ) ) ),
 										the_title( '<span class="screen-reader-text">"', '"</span>', false )
-									) );
+									) );*/
 
 									wp_link_pages( array(
 										'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vedkrishna' ),
@@ -53,4 +57,5 @@
 							<a href="single-post.html" class="basic-link">Read more</a>
 					</div>
 			</div>
+		<!--</div>-->
 	</div>

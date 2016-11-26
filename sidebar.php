@@ -42,42 +42,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
         									);
     										}
 												?>
-												<!--
-												<li>
-												$args = array( 'numberposts' => '5', 'tax_query' => array(
-												array(
-												'taxonomy' => 'post_format',
-												'field'    => 'slug',
-												'terms'    => 'post-format-aside',
-												'operator' => 'NOT IN'
-												),
-												array(
-												'taxonomy' => 'post_format',
-												'field'    => 'slug',
-												'terms'    => 'post-format-image',
-												'operator' => 'NOT IN'
-												)
-												) );
-														<a href="single-post.html" class="media-box">
-																<img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
-														</a>
-														<h5><a href="single-post.html">A single person can change million lives</a></h5>
-														<span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
-												</li>
-												<li>
-														<a href="single-post.html" class="media-box">
-																<img src="<?php bloginfo('template_directory'); ?>/images/post3.jpg" alt="">
-														</a>
-														<h5><a href="single-post.html">Donate your woolens this winter</a></h5>
-														<span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
-												</li>
-												<li>
-														<a href="single-post.html" class="media-box">
-																<img src="<?php bloginfo('template_directory'); ?>/images/post2.jpg" alt="">
-														</a>
-														<h5><a href="single-post.html">How to survive the tough path of life</a></h5>
-														<span class="meta-data grid-item-meta">Posted on 06th Dec, 2015</span>
-												</li> -->
 										</ul>
 								</div>
 						</div>
@@ -103,28 +67,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 													);
 												}
 												?>
-											<!--
-												<li>
-														<a href="single-post.html" class="media-box">
-																<img src="<?php bloginfo('template_directory'); ?>/images/post2.jpg" alt="">
-														</a>
-														<h5><a href="single-post.html">How to survive the tough path of life</a></h5>
-														<span class="meta-data grid-item-meta">Posted on 06th Dec, 2015</span>
-												</li>
-												<li>
-														<a href="single-post.html" class="media-box">
-																<img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
-														</a>
-														<h5><a href="single-post.html">A single person can change million lives</a></h5>
-														<span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
-												</li>
-												<li>
-														<a href="single-post.html" class="media-box">
-																<img src="<?php bloginfo('template_directory'); ?>/images/post3.jpg" alt="">
-														</a>
-														<h5><a href="single-post.html">Donate your woolens this winter</a></h5>
-														<span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
-												</li> -->
 										</ul>
 								</div>
 						</div>
