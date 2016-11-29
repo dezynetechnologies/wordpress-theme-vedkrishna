@@ -11,7 +11,7 @@
 	<!-- <div class="container"> -->
 		<div class="row">
 				  <div class="col-md-4 col-sm-4">
-						<a href="single-post.html" class="media-box grid-featured-img">
+						<a href="<?php esc_url( get_permalink() ); ?>" class="media-box grid-featured-img">
 									<img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
 							</a>
 					</div>
@@ -54,7 +54,7 @@
 							<footer class="entry-footer">
 								<?php vedkrishna_entry_footer(); ?>
 							</footer> --> <!-- .entry-footer -->
-							<a href="single-post.html" class="basic-link">Read more</a>
+							<a href="<?php esc_url( get_permalink()); ?>" class="basic-link">Read more</a>
 					</div>
 			</div>
 		<!--</div>-->

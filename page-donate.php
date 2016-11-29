@@ -19,8 +19,9 @@ $SALT = "FOq8WsvPk4";
 
 // End point - change to https://secure.payu.in for LIVE mode
 $PAYU_BASE_URL = "https://secure.payu.in";
-$surl = "http://vedkrishna.com/success.php";
-$furl = "http://vedkrishna.com/failure.php";
+$surl = "http://vedkrishna.com/success";
+$furl = "http://vedkrishna.com/failure";
+$productinfo = "Donation";
 
 
 $action = '';
@@ -116,15 +117,21 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
                             <li><label><input type="radio" name="donation-amount">$100</label></li>
                         </ul>
                     </div> -->
-               <form method="post" action="<?php echo $action; ?>" name="payuForm">
+               <!-- <?php if($formError) { ?>
+               <span style="color:red">Please fill all mandatory fields.</span>
+               <br/>
+               <br/>
+               <?php } ?> -->
+               <form method="post" action="<?php echo $action; ?>" name="payuForm" id="payuForm">
                 <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
-                <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
+                <input type="hidden" id="hash" name="hash" value="<?php echo $hash ?>"/>
                 <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
                     <div class="col-md-6 col-sm-6 donate-amount-option">
                         <h4>Enter your own</h4>
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon1">₹</span>
                             <input type="number" class="form-control" name="amount" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'] ?>" placeholder="Amount in INR"/>
+                            <input type="hidden" name="productinfo" value="<?php echo $productinfo ?>" />
                         </div>
                     </div>
                 </div>
@@ -153,12 +160,10 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
  </div>
                         </div>
 
-           <input type="hidden" name="productinfo" value="<?php echo $productinfo ?>" />
-           <!--input  type="hidden" name="surl" value="<?php echo (empty($posted['surl'])) ? '' : $posted['surl'] ?>" size="64" />
-           <input  type="hidden" name="furl" value="<?php echo (empty($posted['furl'])) ? '' : $posted['furl'] ?>" size="64" /-->
 
-           <input  type="hidden" name="surl" value="<?php echo $surl ?>" size="64" />
-           <input  type="hidden" name="furl" value="<?php echo $furl ?>" size="64" />
+
+           <input  type="hidden" name="surl" value="<?php echo (empty($posted['surl'])) ?  $surl : $posted['surl'] ?>" size="64" />
+           <input  type="hidden" name="furl" value="<?php echo (empty($posted['furl'])) ?  $furl : $posted['furl'] ?>" size="64" />
 
            <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
                         <!--input type="text" class="form-control" name="email" placeholder="Email address">
@@ -194,8 +199,13 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
             </div>
             <div class="modal-footer text-align-center">
                 <!--button type="submit" name="subs" class="btn btn-primary">Make your donation now</button-->
+                <?php if(!$hash) { ?>
                 <input class="btn btn-primary" type="submit" value="Submit" />
+<<<<<<< HEAD
 
+=======
+                <?php } ?>
+>>>>>>> 0da061b42637c495e6f8e181253e29dc92ef2abf
                 <div class="spacer-20"></div>
 
                 <p ></p>

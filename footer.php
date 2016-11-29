@@ -49,7 +49,7 @@
                                   data-chrome="transparent noheader  nofooter noscrollbar"
                                   height="300" width="300">Tweets by vkfoundation</a>
                             </div>
-                            <script>
+<script>
   !function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0],
         p = /^http:/.test(d.location) ? 'http' : 'https';
