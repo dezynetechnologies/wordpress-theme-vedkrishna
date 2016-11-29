@@ -47,7 +47,7 @@
 
                                   data-theme="dark"
                                   data-chrome="transparent noheader  nofooter noscrollbar"
-                                  height="300" width="200">Tweets by vkfoundation</a>
+                                  height="300" width="300">Tweets by vkfoundation</a>
                             </div>
                             <script>
   !function (d, s, id) {

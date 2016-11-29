@@ -31,6 +31,8 @@ if(!empty($_POST)) {
   foreach($_POST as $key => $value) {
     $posted[$key] = $value;
 
+
+
   }
 }
 
@@ -82,7 +84,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 <?php get_header();?>
     <!-- Hero Area -->
     <div class="hero-area">
-    	<div class="page-banner parallax" style="background-image:url(images/parallax6.jpg);">
+    	<div class="page-banner parallax" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/parallax6.jpg);">
         	<div class="container">
             	<div class="page-banner-text">
         			<h1 class="block-title">Donate Us</h1>
@@ -99,8 +101,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 
                 	<div class="col-md-12 col-sm-12">
 
-                    <div >
-    <div >
+
         <div class="modal-content">
             <div class="modal-header">
 
@@ -136,10 +137,12 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <input type="text" class="form-control" name="firstname" id="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" placeholder="First Name"/>
                             </div>
+
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <input type="text" class="form-control" name="lastname" id="lastname" value="<?php echo (empty($posted['lastname'])) ? '' : $posted['lastname']; ?>" placeholder="Last Name"/>
                             </div>
                         </div>
+
 
            <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-6">
@@ -186,22 +189,21 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
                         </div>
                     </div>
 
+
                  </div>
             </div>
             <div class="modal-footer text-align-center">
                 <!--button type="submit" name="subs" class="btn btn-primary">Make your donation now</button-->
                 <input class="btn btn-primary" type="submit" value="Submit" />
+
                 <div class="spacer-20"></div>
+
                 <p ></p>
             </div>
         </div>
     </div>
 </div>
 </form>
-
-                   	</div>
-
-               	</div>
 
 
                 <!-- <div class="spacer-30"></div>
@@ -308,6 +310,6 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
         </div>
     </div>
 
-    </div>
+
     <!-- Site Footer -->
 <?php get_footer();?>

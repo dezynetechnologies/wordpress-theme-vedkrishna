@@ -70,8 +70,13 @@ get_header(); ?>
                 </div>
             </div>
             <div class="spacer-75"></div>
-           	<div id="contact-map" style="width:100%;height:400px"></div>
-            <div class="spacer-75"></div>
+            <center>
+
+           	<div id="contact-map">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.130544227062!2d77.06594051467923!3d28.595860282432252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b253615d6ef%3A0xd93a819d475a8dfa!2sIcon+International+School!5e0!3m2!1sen!2sin!4v1480406723303" width=80%  height="300"  frameborder="0" style="border:0" allowfullscreen></iframe></div>
+
+   </center>
+   <div class="spacer-75"></div>
         	<div class="container">
             	<div class="row">
                 	<div class="col-md-8 content-block">
@@ -91,7 +96,9 @@ get_header(); ?>
                                         <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="Phone">
                                     </div>
                                 </div>
+
                                 <div class="col-md-7">
+                                
                                     <div class="form-group">
                                         <textarea cols="6" rows="8" id="comments" name="comments" class="form-control input-lg" placeholder="Message"></textarea>
                                     </div>

@@ -42,6 +42,7 @@
 <!-- SCRIPTS
   ================================================== -->
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script><!-- Modernizr -->
+
 </head>
 <body class="home">
 <!--[if lt IE 7]>

@@ -24,6 +24,7 @@ get_header(); ?>
         </div>
     </div>
     <!-- Main Content -->
+    <br>
     <div id="main-container">
     	<div class="content">
         	<div class="container">
