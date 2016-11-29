@@ -46,7 +46,8 @@
  <script type="text/javascript">
   var hash = '<?php echo $hash ?>';
   function submitPayuForm() {
-    hash = document.getElementById("hash").value;
+    if(document.getElementById("hash"))
+      hash = document.getElementById("hash").value;
     if(hash == '') {
       return;
     }
@@ -106,11 +107,13 @@
                     		<li> <a href="<?php bloginfo('url'); ?>/our-impact">
                                             <span class="label-nav">
                                               Our Impact</span></a></li>
-
+                        <li> <a href="<?php bloginfo('url'); ?>/blog">
+                                            <span class="label-nav">
+                                              Blog</span></a></li>
                     		<li> <a href="<?php bloginfo('url'); ?>/contact">
                                             <span class="label-nav">
                                               Contact Us</span></a></li>
                         </ul>
-
+            </div>
         </header>
     </div>

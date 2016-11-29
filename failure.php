@@ -12,6 +12,14 @@
  * @package vedkrishna
  */
 
+get_header();
+
+echo '<br>';
+echo '<div id="main-container">';
+echo '  <div class="content">';
+echo '      <div class="container">';
+echo '        <div class="row">';
+
 $status=$_POST["status"];
 $firstname=$_POST["firstname"];
 $amount=$_POST["amount"];
@@ -36,7 +44,7 @@ If (isset($_POST["additionalCharges"])) {
 		 $hash = hash("sha512", $retHashSeq);
 
        if ($hash != $posted_hash) {
-	       echo "Invalid Transaction. Please try again";
+	       echo "<h3>Invalid Transaction. Please try again</h3>";
 		   }
 	   else {
 
@@ -44,6 +52,11 @@ If (isset($_POST["additionalCharges"])) {
          echo "<h4>Your transaction id for this transaction is ".$txnid.". You may try making the payment by clicking the link below.</h4>";
 
 		 }
-?>
-<!--Please enter your website homepagge URL -->
-<p><a href="http://vedkrishna.com/donate"> Try Again</a></p>
+
+echo '<p><a href="http://vedkrishna.com/donate"> Try Again</a></p>';
+echo '        </div>';
+echo '        </div>';
+echo '      </div>';
+echo '    </div>';
+
+get_footer();?>

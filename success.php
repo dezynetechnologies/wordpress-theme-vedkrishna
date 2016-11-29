@@ -11,7 +11,8 @@
  *
  * @package vedkrishna
  */
- 
+get_header();
+
 $status=$_POST["status"];
 $firstname=$_POST["firstname"];
 $amount=$_POST["amount"];
@@ -35,7 +36,7 @@ If (isset($_POST["additionalCharges"])) {
 		 $hash = hash("sha512", $retHashSeq);
 
        if ($hash != $posted_hash) {
-	       echo "Invalid Transaction. Please try again";
+	       echo "<h3>Invalid Transaction. Please try again</h3>";
 		   }
 	   else {
 
@@ -45,3 +46,6 @@ If (isset($_POST["additionalCharges"])) {
 
 		   }
 ?>
+<!-- Site Footer -->
+<?php
+get_footer();?>

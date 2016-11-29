@@ -83,7 +83,9 @@
                     		<li> <a href="<?php bloginfo('url'); ?>/our-impact">
                                             <span class="label-nav">
                                               Our Impact</span></a></li>
-
+                        <li> <a href="<?php bloginfo('url'); ?>/blog">
+                                            <span class="label-nav">
+                                              Blog</span></a></li>
                     		<li> <a href="<?php bloginfo('url'); ?>/contact">
                                             <span class="label-nav">
                                               Contact Us</span></a></li>
