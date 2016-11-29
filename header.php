@@ -43,8 +43,23 @@
   ================================================== -->
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script><!-- Modernizr -->
 <!-- <?php wp_head(); ?> -->
+<script>
+  var hash = '<?php echo $hash ?>';
+  console.log(hash);
+  function submitPayuForm() {
+    if(hash == '') {
+      alert("return");
+      return;
+    }
+    //var payuForm = document.forms.payuForm;
+    var payuForm = document.getElementById("payuForm");
+    console.log(payuForm);
+    alert("hit");
+    payuForm.submit();
+  }
+</script>
 </head>
-<body class="home">
+<body class="home" onload="submitPayuForm()">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

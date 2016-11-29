@@ -19,8 +19,9 @@ $SALT = "FOq8WsvPk4";
 
 // End point - change to https://secure.payu.in for LIVE mode
 $PAYU_BASE_URL = "https://secure.payu.in";
-$surl = "http://vedkrishna.com/success.php";
-$furl = "http://vedkrishna.com/failure.php";
+$surl = "http://vedkrishna.com/success";
+$furl = "http://vedkrishna.com/failure";
+$productinfo = "Donation";
 
 
 $action = '';
@@ -46,6 +47,17 @@ $hash = '';
 // Hash Sequence
 $hashSequence = "key|txnid|amount|productinfo|firstname|email|udf1|udf2|udf3|udf4|udf5|udf6|udf7|udf8|udf9|udf10";
 if(empty($posted['hash']) && sizeof($posted) > 0) {
+  echo 'hit line no. 50';
+  echo $posted['key'];
+  echo $posted['txnid'];
+  echo $posted['amount'];
+  echo $posted['firstname'];
+  echo $posted['email'];
+  echo $posted['phone'];
+  echo $posted['productinfo'];
+  echo $posted['surl'];
+  echo $posted['furl'];
+  echo $posted['service_provider'];
   if(
           empty($posted['key'])
           || empty($posted['txnid'])
@@ -59,6 +71,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
           || empty($posted['service_provider'])
   ) {
     $formError = 1;
+    echo 'we have hit error and no hash evaluation';
   } else {
     //$posted['productinfo'] = json_encode(json_decode('[{"name":"tutionfee","description":"","value":"500","isRequired":"false"},{"name":"developmentfee","description":"monthly tution fee","value":"1500","isRequired":"false"}]'));
     $hashVarsSeq = explode('|', $hashSequence);
@@ -72,6 +85,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 
 
     $hash = strtolower(hash('sha512', $hash_string));
+    echo 'We have succeeded and hash is '.$hash;
     $action = $PAYU_BASE_URL . '/_payment';
   }
 } elseif(!empty($posted['hash'])) {
@@ -115,7 +129,12 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
                             <li><label><input type="radio" name="donation-amount">$100</label></li>
                         </ul>
                     </div> -->
-               <form method="post" action="<?php echo $action; ?>" name="payuForm">
+               <!-- <?php if($formError) { ?>
+               <span style="color:red">Please fill all mandatory fields.</span>
+               <br/>
+               <br/>
+               <?php } ?> -->
+               <form method="post" action="<?php echo $action; ?>" name="payuForm" id="payuForm">
                 <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
                 <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
                 <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
@@ -124,6 +143,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon1">₹</span>
                             <input type="number" class="form-control" name="amount" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'] ?>" placeholder="Amount in INR"/>
+                            <input type="hidden" name="productinfo" value="<?php echo $productinfo ?>" />
                         </div>
                     </div>
                 </div>
@@ -150,12 +170,10 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
  </div>
                         </div>
 
-           <input type="hidden" name="productinfo" value="<?php echo $productinfo ?>" />
-           <!--input  type="hidden" name="surl" value="<?php echo (empty($posted['surl'])) ? '' : $posted['surl'] ?>" size="64" />
-           <input  type="hidden" name="furl" value="<?php echo (empty($posted['furl'])) ? '' : $posted['furl'] ?>" size="64" /-->
 
-           <input  type="hidden" name="surl" value="<?php echo $surl ?>" size="64" />
-           <input  type="hidden" name="furl" value="<?php echo $furl ?>" size="64" />
+
+           <input  type="hidden" name="surl" value="<?php echo (empty($posted['surl'])) ?  $surl : $posted['surl'] ?>" size="64" />
+           <input  type="hidden" name="furl" value="<?php echo (empty($posted['furl'])) ?  $furl : $posted['furl'] ?>" size="64" />
 
            <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
                         <!--input type="text" class="form-control" name="email" placeholder="Email address">
@@ -190,7 +208,9 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
             </div>
             <div class="modal-footer text-align-center">
                 <!--button type="submit" name="subs" class="btn btn-primary">Make your donation now</button-->
+                <?php if(!$hash) { ?>
                 <input class="btn btn-primary" type="submit" value="Submit" />
+                <?php } ?>
                 <div class="spacer-20"></div>
                 <p ></p>
             </div>
