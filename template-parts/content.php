@@ -11,9 +11,14 @@
 	<!-- <div class="container"> -->
 		<div class="row">
 				  <div class="col-md-4 col-sm-4">
-						<a href="<?php esc_url( get_permalink() ); ?>" class="media-box grid-featured-img">
+						<?php if ( has_post_thumbnail() ) : ?>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="media-box grid-featured-img">
+									<?php the_post_thumbnail(); ?>
+								</a>
+							<?php endif; ?>
+						<!-- <a href="<?php esc_url( get_permalink() ); ?>" class="media-box grid-featured-img">
 									<img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
-							</a>
+							</a>-->
 					</div>
 					<div class="col-md-8 col-sm-8">
 							<?php

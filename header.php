@@ -87,7 +87,7 @@
                 <div class="header-info-col"><i class="fa fa-phone"></i> 9810869242</div>
                 <ul class="sf-menu dd-menu pull-right" role="menu">
                     <li>
-                      <a href="<?php bloginfo('url'); ?>/front-page">
+                      <a href="<?php bloginfo('url'); ?>/">
                                                    <span class="label-nav">
                                                      Home</span></a>
                                 </li>

@@ -31,6 +31,65 @@ get_header(); ?>
             	<div class="row">
                 	<div class="col-md-8 content-block">
                         <ul class="causes-list cause-page-listing">
+                          <?php
+                            if ( get_query_var('paged') ) $paged = get_query_var('paged');
+                            if ( get_query_var('page') ) $paged = get_query_var('page');
+
+                            $query = new WP_Query( array( 'post_type' => 'cause', 'paged' => $paged,'posts_per_page' => 2,'order_by' => 'rand' ) );
+
+                            if ( $query->have_posts() ) : ?>
+	                           <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                               <li class="causes-list-item cause-item">
+                               	<div class="row">
+                                   	<div class="col-md-4 col-sm-4 list-thumb">
+                                      <?php if ( has_post_thumbnail() ) : ?>
+                                          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                            <?php the_post_thumbnail(); ?>
+                                          </a>
+                                        <?php endif; ?>
+                                        <!--
+                                           <a href="single-cause.html">
+                                               <img src="<?php bloginfo('template_directory'); ?>/images/causeg1.jpg" alt="">
+                                           </a> -->
+                                          	<div class="cause-progress"><a class="cProgress" data-complete="88" data-color="F23827" data-toggle="tooltip" data-original-title="10 days left" data-placement="left"><strong></strong></a></div>
+                                       </div>
+                                       <div class="col-md-8 col-sm-8">
+                                           <div class="cause-list-item-cont">
+                                               <?php the_title( '<h3 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
+                                               <?php the_content(); ?>
+                                               <div class="meta-data">Donated $26400 / <span class="cause-target">$30000</span></div>
+                                               <?php
+                                                     $my_custom_field = get_post_custom_values( 'causecoordinator' );
+                                                     foreach ( $my_custom_field as $key => $value ) {
+                                                       echo  $value . "<br />";
+                                                     }
+
+                                                     $mykey_values = get_post_custom_values( 'causecontact' );
+                                                     foreach ( $mykey_values as $key => $value ) {
+                                                       echo $value . "<br />";
+                                                     }
+                                                     echo get_the_term_list( the_ID(), 'causetype', '<strong>RAM Option(s):</strong> ', ', ', '' );
+                                               ?>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </li>
+	                          <?php endwhile; wp_reset_postdata(); ?>
+	                          <!-- show pagination here -->
+                            <?php
+                            $big = 999999999; // need an unlikely integer
+
+                            echo paginate_links( array(
+                                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                                'format' => '?paged=%#%',
+                                'current' => max( 1, get_query_var('paged') ),
+                                'total' => $query->max_num_pages
+                            ) );
+                            ?>
+                           <?php else : ?>
+	                           <!-- show 404 error here -->
+                           <?php endif; ?>
+                            <!--
                             <li class="causes-list-item cause-item">
                             	<div class="row">
                                 	<div class="col-md-4 col-sm-4 list-thumb">
@@ -99,7 +158,7 @@ get_header(); ?>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                         <!-- Page Pagination -->
                         <nav>
