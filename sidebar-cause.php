@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 
 <div class="col-md-4 sidebar-block">
-		<div class="widget tabbed_content tabs">
+		<!-- <div class="widget tabbed_content tabs">
 				<ul class="nav nav-tabs">
 						<li class="active"> <a data-toggle="tab" href="#Trecent">Recent</a> </li>
 						<li> <a data-toggle="tab" href="#Tpopular">Popular</a> </li>
@@ -31,16 +31,15 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     										$recent_posts = wp_get_recent_posts($args);
     										foreach( $recent_posts as $recent ) {
 													$url = esc_url( get_permalink( $recent['ID'] ) );
-													echo '<li><a href="'.$url.'" class="media-box">'.get_the_post_thumbnail($recent['ID'], 'thumbnail').'</a><h5><a href="'.$url.'">'.apply_filters( 'the_title', $recent['post_title'], $recent['ID'] ).'</a></h5><span class="meta-data grid-item-meta">Posted on '.$recent['post_date'].'</span></li>';
-        									/*printf('<a href="%1$s" class="media-box">
+        									printf('<a href="%1$s" class="media-box">
 															<img src="%2$s" alt="">
 													</a><li><h5><a href="%3$s">%4$s</a></h5><span class="meta-data grid-item-meta">Posted on %5$s</span></li>',
 														$url,
-														get_the_post_thumbnail($recent['ID'], 'thumbnail'),
+														get_the_post_thumbnail($recent['ID'], 'full'),
 														$url,
             								apply_filters( 'the_title', $recent['post_title'], $recent['ID'] ),
 														$recent['post_date']
-        									);*/
+        									);
     										}
 												?>
 										</ul>
@@ -57,17 +56,15 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 												$recent_posts = wp_get_recent_posts($args);
 												foreach( $recent_posts as $recent ) {
 													$url = esc_url( get_permalink( $recent['ID'] ) );
-													echo '<li><a href="'.$url.'" class="media-box">'.get_the_post_thumbnail($recent['ID'], 'thumbnail').'</a><h5><a href="'.$url.'">'.apply_filters( 'the_title', $recent['post_title'], $recent['ID'] ).'</a></h5><span class="meta-data grid-item-meta">Posted on '.$recent['post_date'].'</span></li>';
-													/*
 													printf('<a href="%1$s" class="media-box">
 															<img src="%2$s" alt="">
-													</a><h5><a href="%3$s">%4$s</a></h5><span class="meta-data grid-item-meta">Posted on %5$s</span>',
+													</a><li><h5><a href="%3$s">%4$s</a></h5><span class="meta-data grid-item-meta">Posted on %5$s</span></li>',
 														$url,
 														get_the_post_thumbnail($recent['ID'], 'full'),
 														$url,
 														apply_filters( 'the_title', $recent['post_title'], $recent['ID'] ),
 														$recent['post_date']
-													);*/
+													);
 												}
 												?>
 										</ul>
@@ -89,16 +86,17 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 								</div>
 						</div>
 				</div>
-		</div>
+		</div> -->
 		<?php
 		// Only show the widget if site has multiple categories.
 		if ( vedkrishna_categorized_blog() ) :
 	  ?>
 		<div class="widget sidebar-widget widget_categories">
-			<h3 class="widgettitle">Post Categories</h3>
+			<h3 class="widgettitle">Cause Categories</h3>
 				<ul>
 					<?php
 						wp_list_categories( array(
+							'taxonomy'     => 'causetype',
 							'orderby'    => 'count',
 							'order'      => 'DESC',
 							'show_count' => 1,
@@ -111,6 +109,46 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<?php
 		endif;
 		?>
+		<div class="widget recent_posts">
+				<h3 class="widgettitle">Latest Posts</h3>
+						<ul>
+							<?php
+								$args = array('numberposts' => 3, // Number of recent posts thumbnails to display
+															'post_status' => 'publish', // Show only the published posts
+															'orderby' => 'title'
+														 );
+								$recent_posts = wp_get_recent_posts($args);
+								foreach( $recent_posts as $recent ) {
+									$url = esc_url( get_permalink( $recent['ID'] ) );
+									echo '<li><a href="'.$url.'" class="media-box">'.get_the_post_thumbnail($recent['ID'], 'thumbnail').'</a><h5><a href="'.$url.'">'.apply_filters( 'the_title', $recent['post_title'], $recent['ID'] ).'</a></h5><span class="meta-data grid-item-meta">Posted on '.$recent['post_date'].'</span></li>';
+								}
+								?>
+						</ul>
+						<!--
+				<ul>
+						<li>
+								<a href="single-post.html" class="media-box">
+										<img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
+								</a>
+								<h5><a href="single-post.html">A single person can change million lives</a></h5>
+								<span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
+						</li>
+						<li>
+								<a href="single-post.html" class="media-box">
+										<img src="<?php bloginfo('template_directory'); ?>/images/post3.jpg" alt="">
+								</a>
+								<h5><a href="single-post.html">Donate your woolens this winter</a></h5>
+								<span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
+						</li>
+						<li>
+								<a href="single-post.html" class="media-box">
+										<img src="<?php bloginfo('template_directory'); ?>/images/post2.jpg" alt="">
+								</a>
+								<h5><a href="single-post.html">How to survive the tough path of life</a></h5>
+								<span class="meta-data grid-item-meta">Posted on 06th Dec, 2015</span>
+						</li>
+				</ul> -->
+		</div>
 		<div class="widget sidebar-widget widget_search">
 			<div class="input-group">
 					<input type="text" class="form-control" placeholder="Enter your keywords">
