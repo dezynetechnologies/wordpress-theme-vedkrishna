@@ -63,7 +63,7 @@
                 <div class="header-info-col"><i class="fa fa-phone"></i> 9810869242</div>
                 <ul class="sf-menu dd-menu pull-right" role="menu">
                     <li>
-                      <a href="<?php bloginfo('url'); ?>/index">
+                      <a href="<?php bloginfo('url'); ?>/">
                                                    <span class="label-nav">
                                                      Home</span></a>
                                 </li>
@@ -83,7 +83,9 @@
                     		<li> <a href="<?php bloginfo('url'); ?>/our-impact">
                                             <span class="label-nav">
                                               Our Impact</span></a></li>
-
+                        <li> <a href="<?php bloginfo('url'); ?>/blog">
+                                            <span class="label-nav">
+                                              Blog</span></a></li>
                     		<li> <a href="<?php bloginfo('url'); ?>/contact">
                                             <span class="label-nav">
                                               Contact Us</span></a></li>
