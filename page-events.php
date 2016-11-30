@@ -24,6 +24,7 @@ get_header(); ?>
         </div>
     </div>
     <!-- Main Content -->
+    <br>
     <div id="main-container">
     	<div class="content">
         	<div class="container">
@@ -40,7 +41,7 @@ get_header(); ?>
                                     <span class="meta-data">Thursday, 11:20 AM - 02:20 PM</span>
                                     <h4 class="post-title"><a href="#">Fundraising for meals</a></h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam...</p>
-                                    <a href="#" class="btn btn-default">Book Tickets</a>
+                                    <a href="https://www.facebook.com/events/276385872759620/" class="btn btn-default">view on facebook</a>
                                 </div>
                             </li>
                             <li class="event-list-item">

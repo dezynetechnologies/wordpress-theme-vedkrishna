@@ -37,7 +37,7 @@ get_header(); ?>
                                 <div class="icon-box ibox-border">
                                     <div class="ibox-icon">
                                         <i class="fa fa-user-md"></i>
-                                  </div>  
+                                  </div>
                                     <h3>Health Benefits</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
                                 </div>
@@ -102,23 +102,23 @@ get_header(); ?>
             	<div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                            <div class="fact-ico"> <i class="fa fa-dollar fa-4x"></i> </div>
+                            <div class="fact-ico"> <i class="fa fa-inr fa-4x"></i> </div>
                             <div class="timer" data-perc="9000"> <span class="count">1380089</span> </div>
                             <span class="fact">Amount raised</span>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                             <div class="fact-ico"> <i class="fa fa-heart-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="96"> <span class="count">36</span> </div>
+                            <div class="timer" data-perc="96"> <span class="count">3</span> </div>
                             <span class="fact">Causes</span>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                             <div class="fact-ico"> <i class="fa fa-bar-chart-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="1500"> <span class="count">1211</span> </div>
+                            <div class="timer" data-perc="1500"> <span class="count">10</span> </div>
                             <span class="fact">Total members</span>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                             <div class="fact-ico"> <i class="fa fa-hand-peace-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="1500"> <span class="count">61098</span> </div>
+                            <div class="timer" data-perc="1500"> <span class="count">30</span> </div>
                             <span class="fact">People Impacted</span>
                         </div>
                     </div>
@@ -151,17 +151,19 @@ get_header(); ?>
                     <div class="col-md-5 col-sm-5">
                     	<div class="well widget widget_volunteer_form">
                         	<h3>Become a volunteer</h3>
-                            <form>
-                            	<label>Name</label>
-                            	<input type="text" class="form-control">
+                            <form name="contactform" method="post" action="<?php bloginfo('url'); ?>/send_from_volunt">
+                            	<label>FirstName</label>
+                            	<input type="text" name="fname" class="form-control">
+                              <label>LastName</label>
+                            	<input type="text" name="lname" class="form-control">
                             	<label>Email</label>
-                            	<input type="email" class="form-control">
-                            	<label>Address</label>
-                            	<input type="text" class="form-control">
-                                <div class="row">
+                            	<input type="email" name="email" class="form-control">
+                            	<label>address</label>
+                            	<input type="text" name="address" class="form-control">
+                            <!--	    <div class="row">
                                 	<div class="col-md-6 col-sm-6 col-xs-6">
-                            			<label>City</label>
-                                        <select class="selectpicker">
+                            		<label>City</label>
+                                  <select class="selectpicker">
                                         	<option>Albertville</option>
                                         	<option>Auburn</option>
                                         </select>
@@ -222,19 +224,18 @@ get_header(); ?>
                                             <option value="WY">Wyoming</option>
                                         </select>
                                 	</div>
-                               	</div>
+                               	</div>-->
                                 <div class="row">
                                 	<div class="col-md-6 col-sm-6 col-xs-6">
-                            			<label>Postal Code</label>
-                            			<input type="text" class="form-control">
+                            			<label>phone</label>
+                            			<input type="text" name="phone" class="form-control">
                                 	</div>
-                                	<div class="col-md-6 col-sm-6 col-xs-6">
-                            			<label>Country</label>
+                              	<!--  	<div class="col-md-6 col-sm-6 col-xs-6">
+                            		<label>Country</label>
                                         <select class="selectpicker">
-                                        	<option>United States</option>
-                                        	<option>Australia</option>
-                                        	<option>Netherlands</option>
-                                        </select>
+                                        	<option>India</option>
+
+                                        </select>-->
                                 	</div>
                                	</div>
                                 <input type="submit" class="btn btn-primary" value="Submit">

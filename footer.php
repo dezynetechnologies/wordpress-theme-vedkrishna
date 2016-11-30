@@ -14,13 +14,13 @@
         	<div class="row">
             	<div class="col-md-3 col-sm-3">
                 	<div class="widget footer_widget">
-                    	<h4 class="widgettitle">About Born to Give</h4>
+                    	<h4 class="widgettitle">About</h4>
                         <p><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                        <p>VedKrishna Foundation is a NGO registered in India under section 8(1) of Companies Act 2013 and was incorporated in August of 2014.</p>
                         <ul class="social-icons-rounded social-icons-colored">
                           <li class="facebook"><a href="https://www.facebook.com/vedkrishnafoundation"><i class="fa fa-facebook-f"></i></a></li>
                      <li class="twitter"><a href="https://twitter.com/vkfoundation"><i class="fa fa-twitter"></i></a></li>
-                     <li class="googleplus"><a href="https://plus.google.com/u/0/"><i class="fa fa-google-plus"></i></a></li>
+                <!--     <li class="googleplus"><a href="https://plus.google.com/u/0/"><i class="fa fa-google-plus"></i></a></li>-->
                      <li class="youtube"><a href="https://www.youtube.com/channel/UCe2qJvmf7lYszKk0rU3UdEQ"><i class="fa fa-youtube-play"></i></a></li>
 
                      <li class="instagram"><a href="https://www.instagram.com/vedkrishnafoundation/?hl=en"><i class="fa fa-instagram"></i></a></li>
@@ -29,7 +29,7 @@
                 </div>
             	<div class="col-md-3 col-sm-3">
                 	<div class="widget footer_widget widget_links">
-                    	<h4 class="widgettitle">Blogroll</h4>
+                    	<h4 class="widgettitle">Links</h4>
                         <ul>
                           <li><a href="<?php bloginfo('url'); ?>/careers">Become a volunteer</a></li>
                        <li><a href="<?php bloginfo('url'); ?>/our-impact">Our mission</a></li>
@@ -47,7 +47,7 @@
 
                                   data-theme="dark"
                                   data-chrome="transparent noheader  nofooter noscrollbar"
-                                  height="300" width="200">Tweets by vkfoundation</a>
+                                  height="300" width="300">Tweets by vkfoundation</a>
                             </div>
 <script>
   !function (d, s, id) {

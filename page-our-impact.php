@@ -44,14 +44,19 @@ get_header(); ?>
 
                     <div class="col-md-4 sidebar-block">
                     	<div class="widget widget_donations">
-                        	<i class="fa fa-dollar fa-5x pull-left"></i>
-                            <h4>What your single dollar can change</h4>
+                        	<i class="fa fa-inr fa-5x pull-left"></i>
+                            <h4>What your single rupee can change</h4>
                             <form>
                             	<label>Name</label>
                             	<input type="text" class="form-control">
-                            	<label>Amount (in USD)</label>
-                                <input type="text" class="form-control" placeholder="$">
-                                <button class="btn btn-default btn-ghost btn-light btn-rounded btn-block">Donate</button>
+                            	<label>Amount (in INR)</label>
+                                <input type="text" class="form-control" placeholder="INR">
+
+
+
+                              <!--<button class="btn btn-default btn-ghost btn-light btn-rounded btn-block" >Donate</button>-->
+<a href="<?php bloginfo('url'); ?>/donate" button class="btn btn-default btn-ghost btn-light btn-rounded btn-block">Donate</a></button>
+
                             </form>
                         </div>
                     </div>
@@ -62,23 +67,23 @@ get_header(); ?>
             	<div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                            <div class="fact-ico"> <i class="fa fa-dollar fa-4x"></i> </div>
+                            <div class="fact-ico"> <i class="fa fa-inr fa-4x"></i> </div>
                             <div class="timer" data-perc="9000"> <span class="count">1380089</span> </div>
                             <span class="fact">Amount raised</span>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                             <div class="fact-ico"> <i class="fa fa-heart-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="96"> <span class="count">36</span> </div>
+                            <div class="timer" data-perc="96"> <span class="count">3</span> </div>
                             <span class="fact">Causes</span>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                             <div class="fact-ico"> <i class="fa fa-bar-chart-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="1500"> <span class="count">1211</span> </div>
+                            <div class="timer" data-perc="1500"> <span class="count">10</span> </div>
                             <span class="fact">Total members</span>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                             <div class="fact-ico"> <i class="fa fa-hand-peace-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="1500"> <span class="count">61098</span> </div>
+                            <div class="timer" data-perc="1500"> <span class="count">30</span> </div>
                             <span class="fact">People Impacted</span>
                         </div>
                     </div>
@@ -138,7 +143,7 @@ get_header(); ?>
           	</div>
         </div>
     </div>
-  
+
     <!-- Site Footer -->
     <?php
     get_footer();?>

@@ -296,7 +296,7 @@ get_header(); ?>
                                     </li>
                                 </ul>
                                 <div class="gallery-updates-overlay">
-                                    <i class="icon-multiple-image"></i> Updates from our gallery
+                                  
                                 </div>
                             </div>
                         </div>
