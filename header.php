@@ -42,9 +42,6 @@
 <!-- SCRIPTS
   ================================================== -->
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script><!-- Modernizr -->
-<<<<<<< HEAD
-
-=======
 <!-- <?php wp_head(); ?> -->
  <script type="text/javascript">
   var hash = '<?php echo $hash ?>';
@@ -59,7 +56,6 @@
     payuForm.submit();
   }
 </script>
->>>>>>> 0da061b42637c495e6f8e181253e29dc92ef2abf
 </head>
 <body class="home" onload="submitPayuForm()">
 <script type="text/javascript">

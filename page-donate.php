@@ -83,6 +83,25 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 }
 ?>
 <?php get_header();?>
+
+<script>
+function validateForm() {
+    var x = document.forms["payuForm"]["firstname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+
+        var y = document.forms["payuForm"]["email"].value;
+        if (y == "") {
+            alert("email must be filled out");
+            return false;
+    }
+}
+
+
+
+</script>
     <!-- Hero Area -->
     <div class="hero-area">
     	<div class="page-banner parallax" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/parallax6.jpg);">
@@ -122,7 +141,8 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
                <br/>
                <br/>
                <?php } ?> -->
-               <form method="post" action="<?php echo $action; ?>" name="payuForm" id="payuForm">
+               <form method="post" action="<?php echo $action; ?>" name="payuForm" id="payuForm"
+                 onsubmit="return validateForm()" >
                 <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
                 <input type="hidden" id="hash" name="hash" value="<?php echo $hash ?>"/>
                 <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
@@ -153,10 +173,11 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 
            <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-6">
-           <input name="email" id="email" class="form-control"  value="<?php echo (empty($posted['email'])) ? '' : $posted['email']; ?>" placeholder="Email address" />
+           <input type="email" name="email" id="email" class="form-control"  value="<?php echo (empty($posted['email'])) ? '' : $posted['email']; ?>" placeholder="Email address" />
            </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
-           <input name="phone" class="form-control"  value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" placeholder="Phone Number"/>
+           <input type="tel" max="10" name="phone" id="numb" class="form-control"  value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" placeholder="Phone Number"/>
+
  </div>
                         </div>
 
@@ -164,6 +185,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 
            <input  type="hidden" name="surl" value="<?php echo (empty($posted['surl'])) ?  $surl : $posted['surl'] ?>" size="64" />
            <input  type="hidden" name="furl" value="<?php echo (empty($posted['furl'])) ?  $furl : $posted['furl'] ?>" size="64" />
+
 
            <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
                         <!--input type="text" class="form-control" name="email" placeholder="Email address">
@@ -201,11 +223,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
                 <!--button type="submit" name="subs" class="btn btn-primary">Make your donation now</button-->
                 <?php if(!$hash) { ?>
                 <input class="btn btn-primary" type="submit" value="Submit" />
-<<<<<<< HEAD
-
-=======
                 <?php } ?>
->>>>>>> 0da061b42637c495e6f8e181253e29dc92ef2abf
                 <div class="spacer-20"></div>
 
                 <p ></p>
@@ -213,6 +231,11 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
         </div>
     </div>
 </div>
+
+
+
+
+
 </form>
 
 

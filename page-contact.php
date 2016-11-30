@@ -30,13 +30,14 @@ get_header(); ?>
         	<div class="container">
             	<div class="row">
                 	<div class="col-md-3 col-sm-3 col-xs-6">
-                    	<h4 class="block-title">Our Locations</h4>
-                        <a href="mailto:help@borntogive.com">help@borntogive.com</a>
-                        <a href="http://imithemes.com/">http://borntogive.com</a>
+                    	<h4 class="block-title">Our Location</h4>
+                        <a href="mailto:info@vedkrishna.com"> info@vedkrishna.com</a>
+              <!--          <a href="http://imithemes.com/">http://borntogive.com</a>-->
+               <a href="http://vedkrishna.com/">http://vedkrishna.com</a>
                     </div>
                 	<div class="col-md-3 col-sm-3 col-xs-6">
                         <address>
-                            2500 CityWest Blvd.<br>
+                          <!--  2500 CityWest Blvd.<br>
                             Suite 300 Houston,<br>
                             Texas - 77042<br>
                             USA
@@ -61,15 +62,20 @@ get_header(); ?>
                             1380 Solvan City<br>
                             Mechnilian,<br>
                             London - 77042<br>
-                            UK
-                            <br><br>
-                            <strong>TEL:</strong> 1-800-7878-09<br>
-                            <strong>FAX:</strong> 1-800-7878-08
+                            UK-->
+                             12B, J-Block,<br>
+                              Old Rosa Pura Extn.,<br>
+                               Najafgarh, New Delhi - 110043<br>
+                               India
+                            <br>
+                            <strong>TEL:</strong> 9810869242<br>
+
                         </address>
                     </div>
                 </div>
             </div>
-            <div class="spacer-75"></div>
+            <br>
+      <!--      <div class="spacer-75"></div>-->
             <center>
 
            	<div id="contact-map">
@@ -80,14 +86,14 @@ get_header(); ?>
         	<div class="container">
             	<div class="row">
                 	<div class="col-md-8 content-block">
-                    	<form method="post" id="contactform" name="contactform" class="contact-form clearfix" action="http://preview.imithemes.com/born-to-give/mail/contact.php">
+                    	<form method="post" id="contactform" name="contactform" class="contact-form clearfix" action="<?php bloginfo('url'); ?>/send_from_email">
                         	<div class="row">
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <input type="text" id="fname" name="First Name"  class="form-control input-lg" placeholder="First name*">
+                                        <input type="text" id="fname" name="fname"  class="form-control input-lg" placeholder="First name*">
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" id="lname" name="Last Name"  class="form-control input-lg" placeholder="Last name">
+                                        <input type="text" id="lname" name="lname"  class="form-control input-lg" placeholder="Last name">
                                     </div>
                                     <div class="form-group">
                                         <input type="email" id="email" name="email"  class="form-control input-lg" placeholder="Email*">
@@ -98,7 +104,7 @@ get_header(); ?>
                                 </div>
 
                                 <div class="col-md-7">
-                                
+
                                     <div class="form-group">
                                         <textarea cols="6" rows="8" id="comments" name="comments" class="form-control input-lg" placeholder="Message"></textarea>
                                     </div>
@@ -152,6 +158,7 @@ get_header(); ?>
             </div>
         </div>
     </div>
+
     <!-- Site Footer -->
     <?php
     get_footer();?>
