@@ -36,7 +36,7 @@ get_header(); ?>
                             if ( get_query_var('paged') ) $paged = get_query_var('paged');
                             if ( get_query_var('page') ) $paged = get_query_var('page');
 
-                            $query = new WP_Query( array( 'post_type' => 'cause', 'paged' => $paged,'posts_per_page' => 2,'order_by' => 'rand' ) );
+                            $query = new WP_Query( array( 'post_type' => 'cause', 'paged' => $paged,'posts_per_page' => 3,'order_by' => 'rand' ) );
 
                             if ( $query->have_posts() ) : ?>
 	                           <?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -59,8 +59,9 @@ get_header(); ?>
                                            <div class="cause-list-item-cont">
                                                <?php the_title( '<h3 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
                                                <?php the_content(); ?>
-                                               <div class="meta-data">Donated $26400 / <span class="cause-target">$30000</span></div>
+                                               <!-- <div class="meta-data">Donated $26400 / <span class="cause-target">$30000</span></div> -->
                                                <?php
+
                                                      $my_custom_field = get_post_custom_values( 'causecoordinator' );
                                                      foreach ( $my_custom_field as $key => $value ) {
                                                        echo  $value . "<br />";
@@ -70,24 +71,30 @@ get_header(); ?>
                                                      foreach ( $mykey_values as $key => $value ) {
                                                        echo $value . "<br />";
                                                      }
-                                                     echo get_the_term_list( the_ID(), 'causetype', '<strong>RAM Option(s):</strong> ', ', ', '' );
+                                                    $myterms = get_the_term_list( null, 'causetype', 'Cause Type(s): ', ', ', '' );
+                                                    echo $myterms;
+
                                                ?>
                                            </div>
                                        </div>
                                    </div>
                                </li>
 	                          <?php endwhile; wp_reset_postdata(); ?>
+
 	                          <!-- show pagination here -->
+                            <nav>
                             <?php
                             $big = 999999999; // need an unlikely integer
-
-                            echo paginate_links( array(
+                            //'format' => '?paged=%#%',
+                            $return =  paginate_links( array(
                                 'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                                'format' => '?paged=%#%',
+                                'format' => '/page/%#%',
                                 'current' => max( 1, get_query_var('paged') ),
-                                'total' => $query->max_num_pages
+                                'total' => $query->max_num_pages, 'type' => 'list'
                             ) );
+                            echo str_replace( "<ul class='page-numbers'>", '<ul class="pagination pagination-lg">', $return );
                             ?>
+                            </nav>
                            <?php else : ?>
 	                           <!-- show 404 error here -->
                            <?php endif; ?>
@@ -163,7 +170,7 @@ get_header(); ?>
                             </li> -->
                         </ul>
                         <!-- Page Pagination -->
-                        <nav>
+                        <!-- <nav>
                        		<ul class="pagination pagination-lg">
                               	<li>
                                 	<a href="#" aria-label="Previous">
@@ -179,82 +186,10 @@ get_header(); ?>
                                 	</a>
                               	</li>
                         	</ul>
-                       	</nav>
+                       	</nav> -->
                     </div>
-                    <div class="col-md-4 sidebar-block">
-                        <div class="widget sidebar-widget widget_categories">
-                        	<h3 class="widgettitle">Cause Categories</h3>
-                            <ul>
-                            	<li><a href="#">Education</a> (3)</li>
-                            	<li><a href="#">Environment</a> (1)</li>
-                            	<li><a href="#">Global warming</a> (6)</li>
-                            	<li><a href="#">Water</a> (4)</li>
-                            	<li><a href="#">Wild life</a> (2)</li>
-                            	<li><a href="#">Small business</a> (12)</li>
-                            </ul>
-                        </div>
-                        <div class="widget recent_posts">
-                           	<h3 class="widgettitle">Latest Posts</h3>
-                            <ul>
-                                <li>
-                                    <a href="single-post.html" class="media-box">
-                                        <img src="<?php bloginfo('template_directory'); ?>/images/post1.jpg" alt="">
-                                    </a>
-                                    <h5><a href="single-post.html">A single person can change million lives</a></h5>
-                                    <span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
-                                </li>
-                                <li>
-                                    <a href="single-post.html" class="media-box">
-                                        <img src="<?php bloginfo('template_directory'); ?>/images/post3.jpg" alt="">
-                                    </a>
-                                    <h5><a href="single-post.html">Donate your woolens this winter</a></h5>
-                                    <span class="meta-data grid-item-meta">Posted on 11th Dec, 2015</span>
-                                </li>
-                                <li>
-                                    <a href="single-post.html" class="media-box">
-                                        <img src="<?php bloginfo('template_directory'); ?>/images/post2.jpg" alt="">
-                                    </a>
-                                    <h5><a href="single-post.html">How to survive the tough path of life</a></h5>
-                                    <span class="meta-data grid-item-meta">Posted on 06th Dec, 2015</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="widget widget_testimonials">
-                        	<h3 class="widgettitle">Stories of change</h3>
-                            <div class="carousel-wrapper">
-                                <div class="row">
-                                    <ul class="owl-carousel carousel-fw" id="testimonials-slider" data-columns="1" data-autoplay="5000" data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-tablet="1" data-items-mobile="1">
-                                        <li class="item">
-                                            <div class="testimonial-block">
-                                                <blockquote>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                                                </blockquote>
-                                                <div class="testimonial-avatar"><img src="<?php bloginfo('template_directory'); ?>/images/story1.jpg" alt="" width="70" height="70"></div>
-                                                <div class="testimonial-info">
-                                                    <div class="testimonial-info-in">
-                                                        <strong>Ada Ajimobi</strong>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="item">
-                                            <div class="testimonial-block">
-                                                <blockquote>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                                                </blockquote>
-                                                <div class="testimonial-avatar"><img src="<?php bloginfo('template_directory'); ?>/images/story2.jpg" alt="" width="70" height="70"></div>
-                                                <div class="testimonial-info">
-                                                    <div class="testimonial-info-in">
-                                                        <strong>Chloe Lévesque</strong>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- cause sidebar -->
+                    <?php get_template_part('sidebar','cause'); ?>
                 </div>
             </div>
         </div>
