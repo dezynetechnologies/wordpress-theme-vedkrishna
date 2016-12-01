@@ -12,13 +12,14 @@
  * @package vedkrishna
  */
 
-
+echo "ram ram";
 if(isset($_POST['email'])) {
 
 
 
 // EDIT THE 2 LINES BELOW AS REQUIRED
 
+//$email_to = "dheeraj@dezyne.in";
 $email_to = "vedkrishna67@gmail.com";
 
 $email_subject = "Your email subject line";
@@ -57,11 +58,10 @@ if(!isset($_POST['fname']) ||
 
     !isset($_POST['comments'])) {
 
-echo $_POST['fname'];
-echo $_POST['lname'];
-echo $_POST['email'];
-echo $_POST['phone'];
-echo $_POST['comments'];
+//echo $_POST['lname'];
+//echo $_POST['email'];
+//echo $_POST['phone'];
+//echo $_POST['comments'];
 
     died('We are sorry, but there appears to be a problem with the form you submitted.');
 

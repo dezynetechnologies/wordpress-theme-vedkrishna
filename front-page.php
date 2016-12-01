@@ -51,17 +51,17 @@ get_header(); ?>
                 <li class="parallax" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/slide3.jpg)">
                 	<div class="flex-caption">
                     	<div class="container">
-                        	<div class="flex-caption-table">
+                      <div class="flex-caption-table">
                             	<div class="flex-caption-cell text-align-center">
-                        			<div class="flex-caption-cause">
-                            			<h3><a href="#">Save the Glaciers</a></h3>
+                        			<!--<div class="flex-caption-cause">-->
+                            <!--			<h3><a href="#">Save the Glaciers</a></h3>
                     					<p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur  eget.</p>
-                                        	<span class="meta-data">Donated $26400 / <span class="cause-target">$30000</span></span>
-                                    		<a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#DonateModal">Donate Now</a>
+                                        	<span class="meta-data">Donated $26400 / <span class="cause-target">$30000</span></span>-->
+                                    		<a href="<?php bloginfo('url'); ?>/donate" class="btn btn-primary btn-lg">Donate Now</a>
                           			</div>
                         		</div>
-                    		</div>
-                        </div>
+                    	<!--	</div>
+                      </div>-->
                     </div>
                 </li>
           	</ul>
@@ -296,7 +296,7 @@ get_header(); ?>
                                     </li>
                                 </ul>
                                 <div class="gallery-updates-overlay">
-                                  
+
                                 </div>
                             </div>
                         </div>

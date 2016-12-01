@@ -31,6 +31,7 @@ get_header(); ?>
             	<div class="row">
                 	<div class="col-md-8 content-block">
                         <ul class="causes-list cause-page-listing">
+                        
                           <?php
                             if ( get_query_var('paged') ) $paged = get_query_var('paged');
                             if ( get_query_var('page') ) $paged = get_query_var('page');
@@ -47,6 +48,7 @@ get_header(); ?>
                                             <?php the_post_thumbnail(); ?>
                                           </a>
                                         <?php endif; ?>
+
                                         <!--
                                            <a href="single-cause.html">
                                                <img src="<?php bloginfo('template_directory'); ?>/images/causeg1.jpg" alt="">

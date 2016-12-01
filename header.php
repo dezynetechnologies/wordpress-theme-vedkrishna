@@ -41,6 +41,7 @@
 -->
 <!-- SCRIPTS
   ================================================== -->
+  
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script><!-- Modernizr -->
 <!-- <?php wp_head(); ?> -->
  <script type="text/javascript">

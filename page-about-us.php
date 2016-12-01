@@ -86,7 +86,7 @@ get_header(); ?>
                	</div>
 
                 <div class="cta">
-                 	<a href="causes.html" class="btn btn-primary pull-right">Donate Now</a>
+                 	<a href="<?php bloginfo('url'); ?>/donate" class="btn btn-primary pull-right">Donate Now</a>
                 	<p>Let's start doing your bit for the world. Donate a little.</p>
                 </div>
                 <div class="spacer-30"></div>

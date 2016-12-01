@@ -86,17 +86,17 @@ get_header(); ?>
         	<div class="container">
             	<div class="row">
                 	<div class="col-md-8 content-block">
-                    	<form method="post" id="contactform" name="contactform" class="contact-form clearfix" action="<?php bloginfo('url'); ?>/send_from_email">
+                    	<form method="post" id="contactform" name="contactform" class="contact-form clearfix" action="<?php bloginfo('url'); ?>/contactform_validation">
                         	<div class="row">
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <input type="text" id="fname" name="fname"  class="form-control input-lg" placeholder="First name*">
+                                        <input type="text" id="fname" name="fname"  class="form-control input-lg" placeholder="First name*" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" id="lname" name="lname"  class="form-control input-lg" placeholder="Last name">
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" id="email" name="email"  class="form-control input-lg" placeholder="Email*">
+                                        <input type="email" id="email" name="email"  class="form-control input-lg" placeholder="Email*" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="Phone">
