@@ -79,7 +79,7 @@ get_header(); ?>
             <center>
 
            	<div id="contact-map">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.130544227062!2d77.06594051467923!3d28.595860282432252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b253615d6ef%3A0xd93a819d475a8dfa!2sIcon+International+School!5e0!3m2!1sen!2sin!4v1480406723303" width=80%  height="300"  frameborder="0" style="border:0" allowfullscreen></iframe></div>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.055419497054!2d77.07191441468014!3d28.628101082419505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d030dcf5aab3b%3A0x7e386f5fb6852d01!2sNajafgarh+Rd%2C+New+Delhi%2C+Delhi!5e0!3m2!1sen!2sin!4v1480664671927" width=80%  height="300"  frameborder="0" style="border:0" allowfullscreen></iframe></div>
 
    </center>
    <div class="spacer-75"></div>

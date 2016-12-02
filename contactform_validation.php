@@ -12,7 +12,7 @@
  * @package vedkrishna
  */
 
-echo "ram ram";
+
 if(isset($_POST['email'])) {
 
 
