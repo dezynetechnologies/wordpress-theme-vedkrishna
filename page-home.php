@@ -474,7 +474,7 @@ get_header(); ?>
             <div class="accent-bg padding-tb20 cta-fw">
     			<div class="container">
                     <a href="#" class="btn btn-default btn-ghost btn-light btn-rounded pull-right">Become a volunteer</a>
-                    <h4>Let's start doing your bit for the world. Join us as a Volunteer</h4>
+                    <h4>Let's start doing our bit for the world. Join us as a Volunteer</h4>
                 </div>
             </div>
         </div>

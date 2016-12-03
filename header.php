@@ -56,6 +56,7 @@
     payuForm.submit();
   }
 </script>
+<?php wp_head(); ?>
 </head>
 <body class="home" onload="submitPayuForm()">
 <script type="text/javascript">

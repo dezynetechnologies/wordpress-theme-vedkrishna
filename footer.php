@@ -252,6 +252,7 @@
     <li><img alt="" src="<?php bloginfo('template_directory'); ?>/style-switcher/backgrounds/images/img5-thumb.png" data-nr="4" width="20" height="20"></li>
   </ul>
   <small>*only for boxed layout</small> </div> -->
+<?php wp_footer(); ?>
 </body>
 <!-- Mirrored from preview.imithemes.com/born-to-give/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Feb 2016 13:07:19 GMT -->
 </html>
