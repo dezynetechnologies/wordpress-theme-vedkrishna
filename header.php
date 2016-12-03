@@ -9,7 +9,8 @@
  * @package vedkrishna
  */
 
-?><!DOCTYPE HTML>
+?>
+<!DOCTYPE HTML>
 <html class="no-js">
 
 <!-- Mirrored from preview.imithemes.com/born-to-give/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Feb 2016 13:04:08 GMT -->
@@ -41,6 +42,7 @@
 -->
 <!-- SCRIPTS
   ================================================== -->
+
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script><!-- Modernizr -->
 <!-- <?php wp_head(); ?> -->
  <script type="text/javascript">
@@ -58,6 +60,7 @@
 </script>
 <?php wp_head(); ?>
 </head>
+
 <body class="home" onload="submitPayuForm()">
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -67,11 +70,13 @@
 
   ga('create', 'UA-88012898-1', 'auto');
   ga('send', 'pageview');
-
 </script>
+
 <!--[if lt IE 7]>
 	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->
+
+
 <div class="body">
 	<!-- Site Header Wrapper -->
     <div class="site-header-wrapper">
@@ -87,6 +92,7 @@
              	<a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
                 <div class="header-info-col"><i class="fa fa-phone"></i> 9810869242</div>
                 <ul class="sf-menu dd-menu pull-right" role="menu">
+
                     <li>
                       <a href="<?php bloginfo('url'); ?>/">
                                                    <span class="label-nav">
@@ -96,7 +102,7 @@
 
                     <li> <a href="<?php bloginfo('url'); ?>/about">
                                             <span class="label-nav">
-                                              About Us
+                                                About Us
                                             </span></a>
                                             </li>
                     		<li> <a href="<?php bloginfo('url'); ?>/causes">

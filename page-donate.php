@@ -28,6 +28,8 @@ $action = '';
 
 $posted = array();
 if(!empty($_POST)) {
+  //echo $_POST['firstname'];
+  //echo $_POST['amount'];
     //print_r($_POST);
   foreach($_POST as $key => $value) {
     $posted[$key] = $value;
@@ -84,7 +86,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
 ?>
 <?php get_header();?>
 
-<script>
+<!--<script>
 function validateForm() {
     var x = document.forms["payuForm"]["firstname"].value;
     if (x == "") {
@@ -101,7 +103,7 @@ function validateForm() {
 
 
 
-</script>
+</script>-->
     <!-- Hero Area -->
     <div class="hero-area">
     	<div class="page-banner parallax" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/parallax6.jpg);">
@@ -141,8 +143,7 @@ function validateForm() {
                <br/>
                <br/>
                <?php } ?> -->
-               <form method="post" action="<?php echo $action; ?>" name="payuForm" id="payuForm"
-                 onsubmit="return validateForm()" >
+               <form method="post" action="<?php echo $action; ?>" name="payuForm" id="payuForm">
                 <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
                 <input type="hidden" id="hash" name="hash" value="<?php echo $hash ?>"/>
                 <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
@@ -150,7 +151,7 @@ function validateForm() {
                         <h4>Enter your own</h4>
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon1">₹</span>
-                            <input type="number" class="form-control" name="amount" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'] ?>" placeholder="Amount in INR"/>
+                            <input type="number" class="form-control" name="amount" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'];?>" placeholder="Amount in INR"/>
                             <input type="hidden" name="productinfo" value="<?php echo $productinfo ?>" />
                         </div>
                     </div>
@@ -162,7 +163,7 @@ function validateForm() {
                         <h4>Personal info</h4>
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                <input type="text" class="form-control" name="firstname" id="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" placeholder="First Name"/>
+                                <input type="text" class="form-control" name="firstname" id="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname'];?>" placeholder="First Name"/>
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-6">

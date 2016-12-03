@@ -49,18 +49,24 @@ function died($error) {
 
 if(!isset($_POST['fname']) ||
 
-    !isset($_POST['lname']) ||
+  !isset($_POST['state']) ||
+
+    !isset($_POST['pin']) ||
+
+
 
     !isset($_POST['email']) ||
 
     !isset($_POST['phone']) ||
 
-    !isset($_POST['address'])) {
+    !isset($_POST['city'])) {
+
+
 
 //echo $_POST['email'];
 //echo $_POST['address'];
 //echo $_POST['phone'];
-//echo $_POST['pcode'];
+//echo $_POST['city'];
 
     died('We are sorry, but there appears to be a problem with the form you submitted.');
 
@@ -68,15 +74,20 @@ if(!isset($_POST['fname']) ||
 
 
 
-$first_name = $_POST['fname']; // required
+$first_name = $_POST['fname'];
+ // required
 
-$last_name = $_POST['lname']; // required
+$state = $_POST['state'];
 
 $email_from = $_POST['email']; // required
 
-$telephone = $_POST['phone']; // not required
+$telephone = $_POST['city']; // not required
 
-$comments = $_POST['address']; // required
+$pincode = $_POST['pin'];
+
+$comments = $_POST['phone']; // required
+
+//$city = $_POST['city']; // not required
 
 
 
@@ -98,11 +109,7 @@ $error_message .= 'The First Name you entered does not appear to be valid.<br />
 
 }
 
-if(!preg_match($string_exp,$last_name)) {
 
-$error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-
-}
 
 if(strlen($comments) < 2) {
 
@@ -130,15 +137,19 @@ function clean_string($string) {
 
 
 
-$email_message .= "fname: ".clean_string($first_name)."\n";
+$email_message .= "name:: ".clean_string($first_name)."\n";
+$email_message .= "state:: ".clean_string($state)."\n";
+$email_message .= "pincode:: ".clean_string($pincode)."\n";
 
-$email_message .= "lname: ".clean_string($last_name)."\n";
 
-$email_message .= "email: ".clean_string($email_from)."\n";
 
-$email_message .= "phone: ".clean_string($telephone)."\n";
+$email_message .= "email:: ".clean_string($email_from)."\n";
 
-$email_message .= "address ".clean_string($comments)."\n";
+$email_message .= "city:: ".clean_string($telephone)."\n";
+
+$email_message .= "phone:: ".clean_string($comments)."\n";
+
+//$email_message .= "city ".clean_string($city)."\n";
 
 
 

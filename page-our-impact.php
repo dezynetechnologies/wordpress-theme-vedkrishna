@@ -46,16 +46,16 @@ get_header(); ?>
                     	<div class="widget widget_donations">
                         	<i class="fa fa-inr fa-5x pull-left"></i>
                             <h4>What your single rupee can change</h4>
-                            <form>
-                            	<label>Name</label>
-                            	<input type="text" class="form-control">
+                            <form action="<?php bloginfo('url'); ?>/donate" method="post">
+                            	<label>first Name</label>
+                            	<input name="firstname" type="text" class="form-control">
                             	<label>Amount (in INR)</label>
-                                <input type="text" class="form-control" placeholder="INR">
+                                <input name="amount" type="text" class="form-control" placeholder="INR">
 
 
 
                               <!--<button class="btn btn-default btn-ghost btn-light btn-rounded btn-block" >Donate</button>-->
-<a href="<?php bloginfo('url'); ?>/donate" button class="btn btn-default btn-ghost btn-light btn-rounded btn-block">Donate</a></button>
+<input class="btn btn-default btn-ghost btn-light btn-rounded btn-block" type="submit" value="Donate" />
 
                             </form>
                         </div>

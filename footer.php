@@ -9,7 +9,9 @@
  * @package vedkrishna
  */
 
-?>    <div class="site-footer parallax parallax3" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/parallax3.jpg)">
+?>
+
+   <div class="site-footer parallax parallax3" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/parallax3.jpg)">
     	<div class="container">
         	<div class="row">
             	<div class="col-md-3 col-sm-3">
@@ -66,7 +68,7 @@
 </div>
             	<div class="col-md-3 col-sm-3">
                 	<div class="widget footer_widget">
-                     <script async src="https://d36hc0p18k1aoc.cloudfront.net/pages/a5b5e5.js"></script><div class="tintup" data-id="vedkrishna67/instagram" data-columns="1" data-mobilescroll="true"    data-infinitescroll="true" data-personalization-id="841289" style="height:280px;width:320px;"><a href="http://www.tintup.com/blog/the-best-twitter-wall-display" style="width:118px;height:31px;position:absolute;bottom:10px;right: 20px;text-indent: -9999px;z-index:9;">twitter wall for events</a></div>
+                  <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/edaa54fcd108502f984fb1a4863a321f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="height="300" width="300"; border: 0; overflow: hidden;"></iframe>
                     </div>
                 </div>
 
