@@ -34,28 +34,33 @@ get_header(); ?>
                             <div class="ibox-icon">
                                 <i class="fa fa-windows"></i>
                             </div>
-                            <h3>Boxed &amp; Wide Layouts</h3>
-                            <p>2 layout choices for Wide screen and Boxed layout with option to set patterns and images as background.</p>
+                            <h3>Skill Development</h3>
+                            <p>Skill development for underprivileged and downtrodden people
+                              of our society; make them independent economically so that they can lead a respectful and productive life. 
+                            </p>
                         </div>
                         <div class="spacer-20"></div>
                         <div class="icon-box ibox-plain">
                             <div class="ibox-icon">
                                 <i class="fa fa-navicon"></i>
                             </div>
-                            <h3>Megamenu</h3>
-                            <p>The main menu is ready for the multi columns mega menu which can have any kind of HTML/TEXT inside.</p>
+                            <h3>Socio-Cultural Awareness</h3>
+                            <p>Socio-cultural awareness for creating self-supporting communities;
+                              Creating self-help groups for various social causes like elderly care-giving, self-help groups for women.
+                            </p>
                         </div>
                         <div class="spacer-20"></div>
                         <div class="icon-box ibox-plain">
                             <div class="ibox-icon">
                                 <i class="fa fa-twitter"></i>
                             </div>
-                            <h3>Twitter Widget</h3>
-                            <p>An easy to use Twitter feeds plugin is included in the template which can fetch any number of Tweets from your account.</p>
+                            <h3>Cleaner &amp; Better Environment</h3>
+                            <p>Promoting Waste Management, Efficient Resource Management and Organic Farming.</p>
                         </div>
                    	</div>
                     <div class="col-md-8 col-sm-8">
-                    	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
+                    	<p class="lead">We at Vedkrishna Foundation have dedicated ourselves for creating self-supporting communities that devote themselves to uplift the underprivileged among us; for creating cleaner and better environment for our next generations by
+                        various initiatives for raising socio-cultural awareness around these issues.</p>
                         <div class="row">
                         	<div class="col-md-4 col-sm-4">
                             	<div class="grid-item">

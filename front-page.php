@@ -25,7 +25,7 @@ get_header(); ?>
                             	<div class="flex-caption-cell">
                                 	<div class="flex-caption-text">
                                         <h2>Let your life be<br>an Inspiration</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectet<br>adipiscinge lit. Nam malesuada dapi<br>bus diam, ut fringilla purus..</p>
+                                        <!-- <p>Lorem ipsum dolor sit amet, consectet<br>adipiscinge lit. Nam malesuada dapi<br>bus diam, ut fringilla purus..</p> -->
                                         <a href="<?php bloginfo('url'); ?>/causes">
                                                                      <span class="btn btn-primary">Start with a little</a>
                                     </div>
@@ -53,15 +53,15 @@ get_header(); ?>
                     	<div class="container">
                       <div class="flex-caption-table">
                             	<div class="flex-caption-cell text-align-center">
-                        			<!--<div class="flex-caption-cause">-->
-                            <!--			<h3><a href="#">Save the Glaciers</a></h3>
-                    					<p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur  eget.</p>
+                        			<div class="flex-caption-cause">
+                            			<h3><a href="#">Save the Environment</a></h3>
+                    					<!-- <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur  eget.</p>
                                         	<span class="meta-data">Donated $26400 / <span class="cause-target">$30000</span></span>-->
                                     		<a href="<?php bloginfo('url'); ?>/donate" class="btn btn-primary btn-lg">Donate Now</a>
                           			</div>
                         		</div>
-                    	<!--	</div>
-                      </div>-->
+                    		</div>
+                      <!-- </div>-->
                     </div>
                 </li>
           	</ul>
@@ -98,7 +98,7 @@ get_header(); ?>
                         </div>
                         <div class="col-md-7 col-sm-7">
                         	<div class="spacer-10"></div>
-                        	<p>Vestibulum quam nisi, pretium a nibh sit amet, consectetur hendrerit mi. Aenean imperdiet lacus sit amet elit porta, et malesuada erat bibendum. Cras sed nunc massa. Quisque tempor dolor sit amet tellus malesuada, malesuada iaculis eros dignissim. Aenean vitae diam id lacus fringilla maximus. Mauris auctor efficitur nisl, non blandit urna fermentum nec.</p>
+                        	<p>We at Vedkrishna Foundation have dedicated ourselves for creating self-supporting communities that devote themselves to uplift the underprivileged among us; for creating cleaner and better environment for our next generations by various initiatives for raising socio-cultural awareness around these issues.</p>
                         </div>
                   	</div>
                     <div class="carousel-wrapper">
@@ -211,7 +211,7 @@ get_header(); ?>
                 </div>
             	<div class="featured-text col-md-3 col-sm-3">
                 	<span>Total amount raised</span>
-                    <strong>$7850098</strong>
+                    <strong>&#8377 7850098</strong>
                 </div>
             	<div class="featured-text col-md-3 col-sm-3">
                 	<span>Total Volunteers</span>
@@ -404,7 +404,10 @@ get_header(); ?>
                 	<div class="row">
                     	<div class="col-md-4 col-sm-4">
                        		<h2 class="block-title">Latest news from our blog</h2>
-                            <p>Vestibulum quam nisi, pretium a nibh sit amet, consectetur hendrerit mi. Aenean imperdiet lacus sit amet elit porta, et malesuada erat bibendum. Cras sed nunc massa. Quisque tempor dolor sit amet tellus malesuada, malesuada iaculis eros dignissim.</p>
+                            <p>
+                              We love bringing interesting stories from our communities to you. These stories
+                              at times bring laughter on our faces and few times give us tears of joy. Please be a part of our journey.
+                            </p>
                         </div>
 
                         <div class="col-md-8 col-sm-8">
